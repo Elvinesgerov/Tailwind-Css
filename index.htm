@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFT MarketPlace</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+</head>
+
+<body class="bg-[#2B2B2B] p-[25px] overflow-x-hidden">
+
+  <header class="flex justify-between items-center p-4
+               max-[600px]:flex-col 
+               min-[600px]:gap-4
+               max-[600px]:items-center 
+               max-[600px]:justify-center
+               max-[900px]:flex-col
+               max-[1200px]:flex-row
+               max-[1400px]:flex-row">
+
+    <!-- Logo -->
+    <div class="flex items-center
+              max-[600px]:justify-center">
+      <img src="./image/nft_marketplace_logo.svg" alt=""
+        class="max-[600px]:w-[220px] max-[900px]:w-[180px] max-[1200px]:w-[190px] max-[1400px]:w-[220px]">
+    </div>
+
+    <!-- Menu + Button -->
+    <div class="flex gap-[25px] items-center
+              max-[600px]:flex-col max-[600px]:gap-3 max-[600px]:items-center max-[600px]:justify-center
+              max-[900px]:flex-col max-[900px]:gap-3
+              max-[1200px]:flex-row max-[1200px]:gap-5
+              max-[1400px]:flex-row max-[1400px]:gap-6">
+
+      <!-- Navigation -->
+      <ul class="flex gap-[25px] items-center
+               max-[600px]:flex-col max-[600px]:gap-2 max-[600px]:text-center
+               max-[900px]:flex-col max-[900px]:gap-2 max-[900px]:text-center
+               max-[1200px]:flex-row max-[1200px]:gap-4
+               max-[1400px]:flex-row max-[1400px]:gap-5">
+
+        <li class="relative text-white text-[20px] cursor-pointer
+                 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#A259FF] after:transition-all after:duration-500 hover:after:w-full
+                 max-[600px]:text-[20px] min-[900px]:text-[20px]">
+          Marketplace
+        </li>
+
+        <li class="relative text-white text-[20px] cursor-pointer
+                 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#A259FF] after:transition-all after:duration-500 hover:after:w-full
+                 max-[600px]:text-[20px] max-[900px]:text-[20px]">
+          Rankings
+        </li>
+
+        <li class="relative text-white text-[20px] cursor-pointer
+                 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#A259FF] after:transition-all after:duration-500 hover:after:w-full
+                 max-[600px]:text-[20px] max-[900px]:text-[20px]">
+          Connect a wallet
+        </li>
+      </ul>
+
+      <!-- Sign in Button -->
+      <button class="relative overflow-hidden flex gap-[10px] items-center bg-[#A259FF] w-[150px] h-[60px] justify-center rounded-full group
+                   max-[600px]:w-[120px] max-[600px]:h-[50px] 
+                   min-[600px]:text-[20px]
+                   max-[900px]:w-[130px] max-[900px]:h-[55px
+                   max-[1200px]:w-[140px] max-[1200px]:h-[58px]
+                   max-[1400px]:w-[150px] max-[1400px]:h-[60px]">
+        <i class="ri-user-line text-white"></i>
+        <p class="text-white">Sign in</p>
+        <span class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                   before:absolute before:inset-0 before:bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.25)_0px,rgba(255,255,255,0.25)_2px,transparent_2px,transparent_6px)]
+                   before:animate-wave pointer-events-none rounded-full"></span>
+      </button>
+    </div>
+  </header>
+
+
+
+  <main>
+
+    <div class="mt-[50px] p-[20px]">
+      <div class="flex justify-around
+              max-[600px]:flex-col max-[600px]:items-center max-[600px]:gap-8
+              max-[900px]:flex-col max-[900px]:items-center max-[900px]:gap-6
+              max-[1200px]:flex-row max-[1200px]:gap-6
+              max-[1400px]:flex-row gap-10">
+
+        <div class="flex flex-col gap-[20px]
+                max-[600px]:items-center max-[600px]:text-center
+                max-[900px]:items-center max-[900px]:text-center">
+
+          <h1 class="text-[67px] w-[500px] text-white
+                 max-[600px]:text-[36px] max-[600px]:w-[300px]
+                 max-[900px]:text-[48px] max-[900px]:w-[400px]
+                 max-[1200px]:text-[60px] max-[1200px]:w-[450px]">
+            Discover digital art & Collect NFTs
+          </h1>
+
+          <p class="text-[22px] w-[500px] text-white
+                max-[600px]:text-[16px] max-[600px]:w-[280px]
+                max-[900px]:text-[18px] max-[900px]:w-[350px]
+                max-[1200px]:text-[20px] max-[1200px]:w-[450px]">
+            NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.
+          </p>
+
+          <button class="relative overflow-hidden flex gap-[10px] items-center bg-[#A259FF] w-[200px] h-[60px] justify-center rounded-full group
+                      max-[600px]:w-[150px] max-[600px]:h-[50px] max-[600px]:text-[16px]
+                      max-[900px]:w-[170px] max-[900px]:h-[55px] max-[900px]:text-[18px]
+                      max-[1200px]:w-[190px] max-[1200px]:h-[58px] max-[1200px]:text-[20px]">
+            <img src="./image/rocket_icon_hero.svg" alt="">
+            <p class="text-white">Get Started</p>
+            <span class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 
+                     before:absolute before:inset-0 before:bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.25)_0px,rgba(255,255,255,0.25)_2px,transparent_2px,transparent_6px)] 
+                     before:animate-wave pointer-events-none rounded-full">
+            </span>
+          </button>
+
+          <div class="flex justify-between w-[500px]
+                  max-[600px]:flex-col max-[600px]:items-center max-[600px]:gap-4 max-[600px]:w-[150px]
+                  max-[900px]:flex-row max-[900px]:items-center max-[900px]:gap-4 max-[900px]:mb-[25px] max-[900px]:mt-[25px]
+                  max-[1200px]:flex-row max-[1200px]:gap-6">
+            <div class="flex flex-col items-center">
+              <h4 class="text-white text-[28px]
+                     max-[600px]:text-[20px] max-[900px]:text-[24px]">240K+</h4>
+              <p class="text-white text-[24px]
+                     max-[600px]:text-[16px] max-[900px]:text-[20px]">Total Sale</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <h4 class="text-white text-[28px]
+                     max-[600px]:text-[20px] max-[900px]:text-[24px]">100K+</h4>
+              <p class="text-white text-[24px]
+                     max-[600px]:text-[16px] max-[900px]:text-[20px]">Auctions</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <h4 class="text-white text-[28px]
+                     max-[600px]:text-[20px] max-[900px]:text-[24px]">240+</h4>
+              <p class="text-white text-[24px]
+                     max-[600px]:text-[16px] max-[900px]:text-[20px]">Artist</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[20px] perspective w-[500px] h-[550px]
+                max-[600px]:w-[300px] max-[600px]:h-[350px]
+                max-[900px]:w-[400px] max-[900px]:h-[450px]
+                max-[1200px]:w-[450px] max-[1200px]:h-[530px]
+                max-[1400px]:w-[500px] max-[1400px]:h-[550px]
+                max-[450px]:w-[300px] max-[450px]:h-[450px] max-[450px]:ml-[-10px]">
+          <img src="./image/highlighted_NFT.png" alt="" id="tiltImg"
+            class="w-full h-full rounded-lg transition-transform duration-100 transform-style-preserve-3d">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="p-[120px] max-[600px]:p-[30px] max-[900px]:p-[50px] max-[1400px]:flex max-[1400px]:flex-col">
+      <h1
+        class="text-white text-[38px] max-[600px]:text-[28px] max-[600px]:text-center max-[900px]:text-[32px] max-[900px]:text-center max-[1400px]:text-center">
+        Trending Collection</h1>
+      <p
+        class="text-white text-[22px] mt-[10px] max-[600px]:text-[16px] max-[600px]:text-center max-[900px]:text-[18px] max-[900px]:text-center max-[1400px]:text-center">
+        Checkout our weekly
+        updated trending collection.</p>
+
+      <div class="flex flex-wrap justify-between gap-[25px] pt-[75px]
+              max-[600px]:flex-col max-[600px]:items-center max-[600px]:gap-[30px]
+              max-[900px]:flex-row max-[900px]:gap-[20px] max-[900px]:justify-center max-[900px]:text-center
+              max-[1200px]:gap-[25px] max-[1400px]:gap-[30px] min-[1200px]:flex-nowrap">
+
+        <!-- Card 1 -->
+        <div class="flex flex-col gap-[25px] max-[600px]:items-center max-[600px]:w-full max-[900px]:w-[48%] w-[32%]">
+          <div>
+            <img class="transform hover:scale-110 transition duration-[1100ms]"
+              src="./image/primary_trending_collection.png" alt="">
+          </div>
+          <div class="flex justify-between w-full max-[600px]:flex-col min-[600px]:gap-[10px] max-[600px]:items-center">
+            <img class="transform hover:scale-110 transition duration-[1100ms]"
+              src="./image/secondary_trending_collection_1.png" alt="">
+            <img class="transform hover:scale-110 transition duration-[1100ms]"
+              src="./image/secondary_trending_collection_2.png" alt="">
+            <button
+              class="w-[100px] h-[95px] flex items-center justify-center bg-[#A259FF] text-white text-[20px] rounded-[15px] max-[600px]:mt-3">1025+</button>
+          </div>
+          <div class="flex flex-col gap-[7px] max-[600px]:items-center">
+            <h1 class="text-white text-[28px] max-[600px]:text-[22px] max-[900px]:text-left">DSGN Animals</h1>
+            <div class="flex gap-[10px]">
+              <img src="./image/avatar1.svg" alt="">
+              <p class="text-white text-[19px] max-[600px]:text-[16px]">MrFox</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="flex flex-col gap-[25px] max-[600px]:items-center max-[600px]:w-full max-[900px]:w-[48%] w-[32%]">
+          <div>
+            <img class="transform hover:scale-110 transition duration-[1100ms]"
+              src="./image/primary_trending_collection_2.png" alt="">
+          </div>
+          <div class="flex justify-between w-full max-[600px]:flex-col min-[600px]:gap-[10px] max-[600px]:items-center">
+            <img class="transform hover:scale-110 transition duration-[1100ms]"
+              src="./image/secondary_trending_collection_3.png" alt="">
+            <img class="transform hover:scale-110 transition duration-[1100ms]"
+              src="./image/secondary_trending_collection_4.png" alt="">
+            <button
+              class="w-[100px] h-[95px] flex items-center justify-center bg-[#A259FF] text-white text-[20px] rounded-[15px] max-[600px]:mt-3">1050+</button>
+          </div>
+          <div class="flex flex-col gap-[7px] max-[600px]:items-center">
+            <h1
+              class="text-white text-[28px] max-[600px]:text-[22px] max-[600px]:text-center max-[900px]:text-left max-[900px]:w-[250px]">
+              Magic Mushrooms</h1>
+            <div class="flex gap-[10px]">
+              <img src="./image/avatar2.svg" alt="">
+              <p class="text-white text-[19px] max-[600px]:text-[16px]">Shroomie</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="flex flex-col gap-[25px] max-[600px]:items-center max-[600px]:w-full max-[900px]:w-[48%] w-[32%] max-[1200px]:mx-auto max-[1400px]:mx-auto">
+          <div>
+            <img class="transform hover:scale-110 transition duration-[1100ms]"
+              src="./image/primary_trending_collection_3.png" alt="">
+          </div>
+          <div class="flex justify-between w-full max-[600px]:flex-col min-[600px]:gap-[10px] max-[600px]:items-center">
+            <img class="transform hover:scale-110 transition duration-[1100ms]"
+              src="./image/secondary_trending_collection_5.png" alt="">
+            <img class="transform hover:scale-110 transition duration-[1100ms]"
+              src="./image/secondary_trending_collection_6.png" alt="">
+            <button
+              class="w-[100px] h-[95px] flex items-center justify-center bg-[#A259FF] text-white text-[20px] rounded-[15px] max-[600px]:mt-3">1000+</button>
+          </div>
+          <div class="flex flex-col gap-[7px] max-[600px]:items-center">
+            <h1 class="text-white text-[28px] max-[600px]:text-[22px] max-[900px]:text-left">Disco Machines</h1>
+            <div class="flex gap-[10px]">
+              <img src="./image/avatar3.svg" alt="">
+              <p class="text-white text-[19px] max-[600px]:text-[16px]">BeKind2Robots</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-full p-[120px] max-[1400px]:p-[80px] max-[1200px]:p-[60px] max-[900px]:p-[50px] max-[600px]:p-[30px]">
+      <!-- Başlıq -->
+      <div
+        class="flex w-full justify-between items-center max-[900px]:flex-col max-[900px]:gap-5 max-[900px]:items-center">
+        <div class="max-[900px]:text-center">
+          <h1 class="text-white text-[38px] max-[900px]:text-[32px] max-[600px]:text-[28px]">Top Creators</h1>
+          <p class="text-white text-[22px] mt-[10px] max-[900px]:text-[18px] max-[600px]:text-[16px]">
+            Checkout Top Rated Creators on the NFT Marketplace
+          </p>
+        </div>
+        <button class="flex justify-center items-center border-2 border-[#A259FF] cursor-pointer w-[247px] h-[60px] gap-[10px] rounded-[15px] mt-[25px] hover:bg-[#A259FF] transition duration-[1100ms] transform
+                   max-[900px]:self-center max-[900px]:w-[200px] max-[900px]:h-[55px] max-[900px]:text-[15px]
+                   max-[600px]:w-[180px] max-[600px]:h-[50px] max-[600px]:text-[14px]">
+          <img src="./image/rocket_icon_hero.svg" alt="">
+          <p class="text-white text-[17px] max-[900px]:text-[15px] max-[600px]:text-[14px]">View Rankings</p>
+        </button>
+      </div>
+
+      <!-- Kartlar -->
+      <div
+        class="flex flex-wrap justify-center gap-[30px] mt-[50px] max-[900px]:gap-[20px] max-[900px]:justify-center max-[600px]:flex-col max-[600px]:items-center max-[600px]:gap-[20px]">
+
+        <!-- Kart 1 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms]
+           max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center min-[600px]:p-[10px] max-[600px]:gap-[15px]
+           max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            1</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator1.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">Keepitreal</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 2 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px]  max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            2</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator2.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">DigiLab</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 3 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            3</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator3.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">GravityOne</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 4 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px]  max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            4</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator4.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">Juanie</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 5 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            5</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator5.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">BlueWhale</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 6 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            6</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator6.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">Mr Fox</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 7 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            7</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator7.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">Shroomie</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 8 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            8</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator8.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">Mexicake</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 9 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            9</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator9.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">Lonesome</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 10 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            10</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator10.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">MightyOne</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 11 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            11</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator11.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">Moonlight</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+
+        <!-- Kart 12 -->
+        <div
+          class="bg-[#3B3B3B] w-[260px] h-[238px] flex rounded-[20px] group transform hover:scale-110 transition duration-[1100ms] max-[900px]:w-[270px] max-[900px]:h-[260px] max-[900px]:justify-center max-[600px]:w-[250px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:text-center max-[600px]:h-[320px] min-[600px]:p-[10px] max-[600px]:gap-[15px] max-[450px]:w-[250px]">
+          <div
+            class="h-[30px] w-[30px] rounded-full bg-[#2b2b2b] mt-[25px] flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-[1100ms]">
+            12</div>
+          <div class="flex flex-col items-center justify-center gap-[7px]">
+            <img src="./image/creator12.png" alt="">
+            <h2 class="text-white text-[27px] max-[600px]:text-[20px] max-[600px]:mt-[10px]">Starlord</h2>
+            <p class="text-[#858584] text-[18px] max-[600px]:text-[16px]">Total Sales: <span
+                class="text-white text-[20px] max-[600px]:text-[18px]">34.53 ETH</span></p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="p-[140px] max-[1400px]:p-[120px] max-[1200px]:p-[100px] max-[900px]:p-[80px] max-[600px]:p-[40px]">
+        <h1
+          class="text-white text-[40px] max-[1400px]:text-[38px] max-[1200px]:text-[36px] max-[900px]:text-[34px] max-[600px]:text-[30px] max-[450px]:text-[26px] max-[600px]:text-center mb-[40px] max-[450px]:mb-[30px] min-[900px]:text-center">
+          Browse Categories
+        </h1>
+
+        <div class="grid grid-cols-4 gap-[30px]
+           max-[1200px]:grid-cols-3
+           max-[900px]:grid-cols-2 max-[900px]:gap-[20px]
+           max-[600px]:grid-cols-1 max-[600px]:flex max-[600px]:flex-col max-[600px]:items-center max-[600px]:justify-center
+           min-[600px]:flex min-[600px]:flex-wrap min-[900px]:justify-center
+           max-[1200px]:gap-[10px] min-[1400px]:gap-[25px] min-[350px]:mx-auto">
+
+          <!-- 1. Kart -->
+          <div class="w-[300px] h-[380px] rounded-t group transform hover:scale-110 transition duration-[1100ms]
+          max-[1400px]:w-[280px] max-[1400px]:h-[360px]
+          max-[1200px]:w-[260px] max-[1200px]:h-[340px]
+          max-[900px]:w-[250px] max-[900px]:h-[320px] min-[350px]:flex min-[350px]:flex-col min-[350px]:items-center
+          max-[600px]:w-[220px] max-[600px]:h-[300px] min-[320px]:mx-auto">
+            <div class="w-full h-[75%]">
+              <img class="w-full h-full" src="./image/category_icon1.png" alt="">
+            </div>
+            <div class="w-full h-[25%] p-[28px] bg-[#3B3B3B] rounded-bl-[15px] rounded-br-[15px] transform transition duration-[1100ms] group-hover:bg-[#A259FF]
+          max-[1400px]:p-[26px] max-[1200px]:p-[24px] max-[900px]:p-[22px] max-[600px]:p-[20px] max-[450px]:p-[16px]">
+              <h1
+                class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[21px] max-[600px]:text-[20px] max-[450px]:text-[18px]">
+                Art
+              </h1>
+            </div>
+          </div>
+
+          <!-- 2. Kart -->
+          <div class="w-[300px] h-[380px] rounded-t group transform hover:scale-110 transition duration-[1100ms]
+          max-[1400px]:w-[280px] max-[1400px]:h-[360px]
+          max-[1200px]:w-[260px] max-[1200px]:h-[340px]
+          max-[900px]:w-[250px] max-[900px]:h-[320px] min-[350px]:mx-auto
+          max-[600px]:w-[220px] max-[600px]:h-[300px] min-[350px]:flex min-[350px]:flex-col min-[350px]:items-center">
+            <div class="w-full h-[75%]">
+              <img class="w-full h-full" src="./image/category_icon2.png" alt="">
+            </div>
+            <div class="w-full h-[25%] p-[28px] bg-[#3B3B3B] rounded-bl-[15px] rounded-br-[15px] transform transition duration-[1100ms] group-hover:bg-[#A259FF]
+          max-[1400px]:p-[26px] max-[1200px]:p-[24px] max-[900px]:p-[22px] max-[600px]:p-[20px] max-[450px]:p-[16px]">
+              <h1
+                class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[21px] max-[600px]:text-[20px] max-[450px]:text-[18px]">
+                Collectibles
+              </h1>
+            </div>
+          </div>
+
+          <!-- 3. Kart -->
+          <div class="w-[300px] h-[380px] rounded-t group transform hover:scale-110 transition duration-[1100ms]
+          max-[1400px]:w-[280px] max-[1400px]:h-[360px]
+          max-[1200px]:w-[260px] max-[1200px]:h-[340px]
+          max-[900px]:w-[250px] max-[900px]:h-[320px] min-[350px]:mx-auto
+          max-[600px]:w-[220px] max-[600px]:h-[300px] min-[350px]:flex min-[350px]:flex-col min-[350px]:items-center">
+            <div class="w-full h-[75%]">
+              <img class="w-full h-full" src="./image/category_icon3.png" alt="">
+            </div>
+            <div class="w-full h-[25%] p-[28px] bg-[#3B3B3B] rounded-bl-[15px] rounded-br-[15px] transform transition duration-[1100ms] group-hover:bg-[#A259FF]
+          max-[1400px]:p-[26px] max-[1200px]:p-[24px] max-[900px]:p-[22px] max-[600px]:p-[20px] max-[450px]:p-[16px]">
+              <h1
+                class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[21px] max-[600px]:text-[20px] max-[450px]:text-[18px]">
+                Music
+              </h1>
+            </div>
+          </div>
+
+          <!-- 4. Kart -->
+          <div class="w-[300px] h-[380px] rounded-t group transform hover:scale-110 transition duration-[1100ms]
+          max-[1400px]:w-[280px] max-[1400px]:h-[360px]
+          max-[1200px]:w-[260px] max-[1200px]:h-[340px]
+          max-[900px]:w-[250px] max-[900px]:h-[320px] min-[350px]:mx-auto
+          max-[600px]:w-[220px] max-[600px]:h-[300px] min-[350px]:flex min-[350px]:flex-col min-[350px]:items-center">
+            <div class="w-full h-[75%]">
+              <img class="w-full h-full" src="./image/category_icon4.png" alt="">
+            </div>
+            <div class="w-full h-[25%] p-[28px] bg-[#3B3B3B] rounded-bl-[15px] rounded-br-[15px] transform transition duration-[1100ms] group-hover:bg-[#A259FF]
+          max-[1400px]:p-[26px] max-[1200px]:p-[24px] max-[900px]:p-[22px] max-[600px]:p-[20px] max-[450px]:p-[16px]">
+              <h1
+                class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[21px] max-[600px]:text-[20px] max-[450px]:text-[18px]">
+                Photography
+              </h1>
+            </div>
+          </div>
+
+          <!-- 5. Kart -->
+          <div class="w-[300px] h-[380px] rounded-t group transform hover:scale-110 transition duration-[1100ms]
+          max-[1400px]:w-[280px] max-[1400px]:h-[360px]
+          max-[1200px]:w-[260px] max-[1200px]:h-[340px]
+          max-[900px]:w-[250px] max-[900px]:h-[320px] min-[350px]:mx-auto
+          max-[600px]:w-[220px] max-[600px]:h-[300px] min-[350px]:flex min-[350px]:flex-col min-[350px]:items-center">
+            <div class="w-full h-[75%]">
+              <img class="w-full h-full" src="./image/category_icon5.png" alt="">
+            </div>
+            <div class="w-full h-[25%] p-[28px] bg-[#3B3B3B] rounded-bl-[15px] rounded-br-[15px] transform transition duration-[1100ms] group-hover:bg-[#A259FF]
+          max-[1400px]:p-[26px] max-[1200px]:p-[24px] max-[900px]:p-[22px] max-[600px]:p-[20px] max-[450px]:p-[16px]">
+              <h1
+                class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[21px] max-[600px]:text-[20px] max-[450px]:text-[18px]">
+                Video
+              </h1>
+            </div>
+          </div>
+
+          <!-- 6. Kart -->
+          <div class="w-[300px] h-[380px] rounded-t group transform hover:scale-110 transition duration-[1100ms]
+          max-[1400px]:w-[280px] max-[1400px]:h-[360px]
+          max-[1200px]:w-[260px] max-[1200px]:h-[340px]
+          max-[900px]:w-[250px] max-[900px]:h-[320px] min-[350px]:mx-auto
+          max-[600px]:w-[220px] max-[600px]:h-[300px] min-[350px]:flex min-[350px]:flex-col min-[350px]:items-center">
+            <div class="w-full h-[75%]">
+              <img class="w-full h-full" src="./image/category_icon6.png" alt="">
+            </div>
+            <div class="w-full h-[25%] p-[28px] bg-[#3B3B3B] rounded-bl-[15px] rounded-br-[15px] transform transition duration-[1100ms] group-hover:bg-[#A259FF]
+          max-[1400px]:p-[26px] max-[1200px]:p-[24px] max-[900px]:p-[22px] max-[600px]:p-[20px] max-[450px]:p-[16px]">
+              <h1
+                class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[21px] max-[600px]:text-[20px] max-[450px]:text-[18px]">
+                Utility
+              </h1>
+            </div>
+          </div>
+
+          <!-- 7. Kart -->
+          <div class="w-[300px] h-[380px] rounded-t group transform hover:scale-110 transition duration-[1100ms]
+          max-[1400px]:w-[280px] max-[1400px]:h-[360px]
+          max-[1200px]:w-[260px] max-[1200px]:h-[340px]
+          max-[900px]:w-[250px] max-[900px]:h-[320px] min-[350px]:mx-auto
+          max-[600px]:w-[220px] max-[600px]:h-[300px] min-[350px]:flex min-[350px]:flex-col min-[350px]:items-center">
+            <div class="w-full h-[75%]">
+              <img class="w-full h-full" src="./image/category_icon7.png" alt="">
+            </div>
+            <div class="w-full h-[25%] p-[28px] bg-[#3B3B3B] rounded-bl-[15px] rounded-br-[15px] transform transition duration-[1100ms] group-hover:bg-[#A259FF]
+          max-[1400px]:p-[26px] max-[1200px]:p-[24px] max-[900px]:p-[22px] max-[600px]:p-[20px] max-[450px]:p-[16px]">
+              <h1
+                class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[21px] max-[600px]:text-[20px] max-[450px]:text-[18px]">
+                Sport
+              </h1>
+            </div>
+          </div>
+
+          <!-- 8. Kart -->
+          <div class="w-[300px] h-[380px] rounded-t group transform hover:scale-110 transition duration-[1100ms]
+          max-[1400px]:w-[280px] max-[1400px]:h-[360px]
+          max-[1200px]:w-[260px] max-[1200px]:h-[340px]
+          max-[900px]:w-[250px] max-[900px]:h-[320px] min-[350px]:mx-auto
+          max-[600px]:w-[220px] max-[600px]:h-[300px] min-[350px]:flex min-[350px]:flex-col min-[350px]:items-center">
+            <div class="w-full h-[75%]">
+              <img class="w-full h-full" src="./image/category_icon8.png" alt="">
+            </div>
+            <div class="w-full h-[25%] p-[28px] bg-[#3B3B3B] rounded-bl-[15px] rounded-br-[15px] transform transition duration-[1100ms] group-hover:bg-[#A259FF]
+          max-[1400px]:p-[26px] max-[1200px]:p-[24px] max-[900px]:p-[22px] max-[600px]:p-[20px] max-[450px]:p-[16px]">
+              <h1
+                class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[21px] max-[600px]:text-[20px] max-[450px]:text-[18px]">
+                Virtual Worlds
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="p-[120px] max-[1200px]:p-[100px] max-[900px]:p-[80px] max-[600px]:p-[60px] max-[450px]:p-[40px]">
+        <!-- Başlıq və Button -->
+        <div
+          class="flex w-full justify-between max-[1200px]:justify-center max-[1200px]:items-center max-[1200px]:gap-[20px] max-[900px]:flex-col max-[900px]:gap-[25px] max-[900px]:items-center">
+
+          <div class="text-center max-[900px]:text-center">
+            <h1
+              class="text-white text-[38px] max-[1200px]:text-[34px] max-[900px]:text-[30px] max-[600px]:text-[26px] max-[450px]:text-[22px]">
+              Discover More NFTs
+            </h1>
+            <p
+              class="text-white text-[22px] mt-[10px] max-[1200px]:text-[20px] max-[900px]:text-[18px] max-[600px]:text-[16px] max-[450px]:text-[14px]">
+              Explore new trending NFTs
+            </p>
+          </div>
+
+          <button class="relative group flex justify-center items-center border-2 border-[#A259FF] border-opacity-30 w-[247px] h-[60px] gap-[10px] rounded-[15px] mt-[25px] overflow-hidden
+      max-[900px]:self-center max-[600px]:w-[200px] max-[450px]:w-[160px] max-[450px]:h-[50px]">
+            <img src="./image/eye_icon_discover.svg" alt="">
+            <p class="text-white text-[17px] max-[600px]:text-[15px] max-[450px]:text-[13px]">See All</p>
+            <span
+              class="absolute bottom-0 left-0 w-full h-2 bg-[#A259FF] scale-x-0 transform transition-transform duration-[1100ms] origin-center group-hover:scale-x-100"></span>
+          </button>
+        </div>
+
+        <!-- Kartlar -->
+        <div
+          class="flex flex-wrap justify-center gap-[30px] w-full mt-[50px] max-[1200px]:pl-[3%] min-[1200px]:flex-nowrap">
+
+          <!-- Kart 1 -->
+          <div class="bg-[#3B3B3B] rounded-[15px] overflow-hidden group relative cursor-pointer
+      w-[360px] h-[520px]
+      max-[1400px]:w-[340px] max-[1400px]:h-[480px]
+      max-[1200px]:w-[320px] max-[1200px]:h-[460px]
+      max-[900px]:w-[80%] max-[900px]:h-[460px]
+      max-[600px]:w-[90%] max-[600px]:h-[400px]
+      max-[450px]:w-full max-[450px]:h-[380px]">
+            <div class="w-full h-[60%] rounded-t overflow-hidden relative">
+              <img class="w-full h-full rounded-t object-cover" src="./image/artist_icon1.png" alt="">
+              <div
+                class="absolute inset-0 bg-gray-700 opacity-0 transition-opacity duration-500 group-hover:opacity-30 rounded-t">
+              </div>
+            </div>
+            <div class="w-full h-[40%] bg-[#3B3B3B] p-[20px] rounded-bl-[15px] rounded-br-[15px] relative
+        max-[1200px]:p-[18px] max-[900px]:p-[16px] max-[600px]:p-[14px] max-[450px]:p-[12px]">
+              <div class="flex flex-col gap-[12px] max-[600px]:gap-[10px] max-[450px]:gap-[8px]">
+                <h1
+                  class="text-white text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[20px] max-[600px]:text-[18px] max-[450px]:text-[16px]">
+                  Distant Galaxy</h1>
+                <div class="flex gap-[6px] max-[600px]:gap-[5px] max-[450px]:gap-[4px] items-center">
+                  <img src="./image/artist_mini_icon1.svg" alt="">
+                  <p
+                    class="text-white text-[18px] max-[1200px]:text-[16px] max-[900px]:text-[15px] max-[600px]:text-[14px] max-[450px]:text-[12px]">
+                    Moon Dancer</p>
+                </div>
+              </div>
+              <div class="flex justify-between mt-[45px] max-[600px]:mt-[35px] max-[450px]:mt-[30px]">
+                <div>
+                  <h4 class="text-[#838478] text-[14px] max-[600px]:text-[13px] max-[450px]:text-[12px]">Price</h4>
+                  <p class="text-white text-[18px] max-[600px]:text-[16px] max-[450px]:text-[14px]">1.63 ETH</p>
+                </div>
+                <div>
+                  <h4 class="text-[#838478] text-[14px] max-[600px]:text-[13px] max-[450px]:text-[12px]">Highest Bid
+                  </h4>
+                  <p class="text-white text-[18px] max-[600px]:text-[16px] max-[450px]:text-[14px]">0.33 wETH</p>
+                </div>
+              </div>
+              <span
+                class="absolute bottom-0 left-0 w-full h-1 bg-[#A259FF] scale-x-0 transform transition-transform duration-[1100ms] origin-center group-hover:scale-x-100"></span>
+            </div>
+          </div>
+
+          <!-- Kart 2 -->
+          <div class="bg-[#3B3B3B] rounded-[15px] overflow-hidden group relative cursor-pointer
+      w-[360px] h-[520px]
+      max-[1400px]:w-[340px] max-[1400px]:h-[480px]
+      max-[1200px]:w-[320px] max-[1200px]:h-[460px]
+      max-[900px]:w-[80%] max-[900px]:h-[460px]
+      max-[600px]:w-[90%] max-[600px]:h-[400px]
+      max-[450px]:w-[100%] max-[450px]:h-[380px]">
+            <div class="w-full h-[60%] rounded-t overflow-hidden relative">
+              <img class="w-full h-full rounded-t object-cover" src="./image/artist_icon2.png" alt="">
+              <div
+                class="absolute inset-0 bg-black opacity-0 transition-opacity duration-500 group-hover:opacity-30 rounded-t">
+              </div>
+            </div>
+            <div class="w-full h-[40%] bg-[#3B3B3B] p-[20px] rounded-bl-[15px] rounded-br-[15px] relative
+        max-[1200px]:p-[18px] max-[900px]:p-[16px] max-[600px]:p-[14px] max-[450px]:p-[12px]">
+              <div class="flex flex-col gap-[12px] max-[600px]:gap-[10px] max-[450px]:gap-[8px]">
+                <h1
+                  class="text-white text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[20px] max-[600px]:text-[18px] max-[450px]:text-[16px]">
+                  Life on Edena</h1>
+                <div class="flex gap-[6px] max-[600px]:gap-[5px] max-[450px]:gap-[4px] items-center">
+                  <img src="./image/artist_mini_icon2.svg" alt="">
+                  <p
+                    class="text-white text-[18px] max-[1200px]:text-[16px] max-[900px]:text-[15px] max-[600px]:text-[14px] max-[450px]:text-[12px]">
+                    NebulaKid</p>
+                </div>
+              </div>
+              <div class="flex justify-between mt-[45px] max-[600px]:mt-[35px] max-[450px]:mt-[30px]">
+                <div>
+                  <h4 class="text-[#838478] text-[14px] max-[600px]:text-[13px] max-[450px]:text-[12px]">Price</h4>
+                  <p class="text-white text-[18px] max-[600px]:text-[16px] max-[450px]:text-[14px]">1.63 ETH</p>
+                </div>
+                <div>
+                  <h4 class="text-[#838478] text-[14px] max-[600px]:text-[13px] max-[450px]:text-[12px]">Highest Bid
+                  </h4>
+                  <p class="text-white text-[18px] max-[600px]:text-[16px] max-[450px]:text-[14px]">0.33 wETH</p>
+                </div>
+              </div>
+              <span
+                class="absolute bottom-0 left-0 w-full h-1 bg-[#A259FF] scale-x-0 transform transition-transform duration-[1100ms] origin-center group-hover:scale-x-100"></span>
+            </div>
+          </div>
+
+          <!-- Kart 3 -->
+          <div class="bg-[#3B3B3B] rounded-[15px] overflow-hidden group relative cursor-pointer
+      w-[360px] h-[520px]
+      max-[1400px]:w-[340px] max-[1400px]:h-[480px]
+      max-[1200px]:w-[320px] max-[1200px]:h-[460px]
+      max-[900px]:w-[80%] max-[900px]:h-[460px]
+      max-[600px]:w-[90%] max-[600px]:h-[400px]
+      max-[450px]:w-[100%] max-[450px]:h-[380px]">
+            <div class="w-full h-[60%] rounded-t overflow-hidden relative">
+              <img class="w-full h-full rounded-t object-cover" src="./image/artist_icon3.png" alt="">
+              <div
+                class="absolute inset-0 bg-black opacity-0 transition-opacity duration-500 group-hover:opacity-30 rounded-t">
+              </div>
+            </div>
+            <div class="w-full h-[40%] bg-[#3B3B3B] p-[20px] rounded-bl-[15px] rounded-br-[15px] relative
+        max-[1200px]:p-[18px] max-[900px]:p-[16px] max-[600px]:p-[14px] max-[450px]:p-[12px]">
+              <div class="flex flex-col gap-[12px] max-[600px]:gap-[10px] max-[450px]:gap-[8px]">
+                <h1
+                  class="text-white text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[20px] max-[600px]:text-[18px] max-[450px]:text-[16px]">
+                  AstroFiction</h1>
+                <div class="flex gap-[6px] max-[600px]:gap-[5px] max-[450px]:gap-[4px] items-center">
+                  <img src="./image/artist_mini_icon3.svg" alt="">
+                  <p
+                    class="text-white text-[18px] max-[1200px]:text-[16px] max-[900px]:text-[15px] max-[600px]:text-[14px] max-[450px]:text-[12px]">
+                    Spaceone</p>
+                </div>
+              </div>
+              <div class="flex justify-between mt-[45px] max-[600px]:mt-[35px] max-[450px]:mt-[30px]">
+                <div>
+                  <h4 class="text-[#838478] text-[14px] max-[600px]:text-[13px] max-[450px]:text-[12px]">Price</h4>
+                  <p class="text-white text-[18px] max-[600px]:text-[16px] max-[450px]:text-[14px]">1.63 ETH</p>
+                </div>
+                <div>
+                  <h4 class="text-[#838478] text-[14px] max-[600px]:text-[13px] max-[450px]:text-[12px]">Highest Bid
+                  </h4>
+                  <p class="text-white text-[18px] max-[600px]:text-[16px] max-[450px]:text-[14px]">0.33 wETH</p>
+                </div>
+              </div>
+              <span
+                class="absolute bottom-0 left-0 w-full h-1 bg-[#A259FF] scale-x-0 transform transition-transform duration-[1100ms] origin-center group-hover:scale-x-100"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w-full h-[100vh] bg-[url(./image/gobelek.webp)] bg-no-repeat bg-cover bg-center flex items-center justify-around 
+  max-[1400px]:gap-[80px] max-[1400px]:p-[80px] 
+  max-[1200px]:gap-[70px] max-[1200px]:p-[60px] 
+  max-[900px]:gap-[60px] max-[900px]:p-[25px] 
+  max-[600px]:flex-col max-[600px]:justify-center max-[600px]:gap-[40px] max-[600px]:p-[20px]">
+
+        <!-- Left Side -->
+        <div class="flex flex-col gap-[30px] 
+    max-[1400px]:gap-[28px] 
+    max-[1200px]:gap-[26px] 
+    max-[900px]:gap-[25px] 
+    max-[600px]:items-center max-[600px]:text-center">
+
+          <!-- Avatar -->
+          <div class="w-[151px] h-[44px] bg-[#3B3B3B] flex gap-[10px] items-center justify-center rounded-full 
+      max-[1400px]:w-[150px] max-[1400px]:h-[43px] 
+      max-[1200px]:w-[145px] max-[1200px]:h-[42px] 
+      max-[900px]:w-[140px] max-[900px]:h-[42px] 
+      max-[600px]:w-[130px] max-[600px]:h-[40px]">
+            <img src="./image/avatar2.svg" alt="">
+            <p class="text-white text-[16px] 
+      max-[1400px]:text-[16px] 
+      max-[1200px]:text-[15px] 
+      max-[900px]:text-[15px] 
+      max-[600px]:text-[14px]">Shroomie</p>
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-white text-[38px] 
+    max-[1400px]:text-[36px] 
+    max-[1200px]:text-[34px] 
+    max-[900px]:text-[32px] 
+    max-[600px]:text-[28px]">Magic Mushrooms</h1>
+
+          <!-- Button -->
+          <button class="relative overflow-hidden flex gap-[10px] items-center bg-[#A259FF] w-[200px] h-[60px] justify-center rounded-full group 
+      max-[1400px]:w-[195px] max-[1400px]:h-[58px] 
+      max-[1200px]:w-[190px] max-[1200px]:h-[56px] 
+      max-[900px]:w-[185px] max-[900px]:h-[55px] 
+      max-[600px]:w-[180px] max-[600px]:h-[50px]">
+            <img src="./image/rocket_icon_hero.svg" alt="">
+            <p class="text-[22px] text-white 
+      max-[1400px]:text-[21px] 
+      max-[1200px]:text-[20px] 
+      max-[900px]:text-[20px] 
+      max-[600px]:text-[18px]">See NFT</p>
+            <span class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 
+      before:absolute before:inset-0 before:bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.25)_0px,rgba(255,255,255,0.25)_2px,transparent_2px,transparent_6px)] 
+      before:animate-wave pointer-events-none rounded-full">
+            </span>
+          </button>
+        </div>
+
+        <!-- Right Side -->
+        <div class="flex flex-col gap-[5px] items-center justify-center w-[270px] h-[140px] rounded-[20px] bg-[#2B2B2B]
+    max-[1400px]:w-[260px] max-[1400px]:h-[135px] 
+    max-[1200px]:w-[255px] max-[1200px]:h-[130px] 
+    max-[900px]:w-[250px] max-[900px]:h-[130px]
+    max-[600px]:w-[220px] max-[600px]:h-[120px]">
+          <p class="text-white text-[16px] 
+    max-[1400px]:text-[16px] 
+    max-[1200px]:text-[15px] 
+    max-[900px]:text-[15px] 
+    max-[600px]:text-[14px]">Auction ends in:</p>
+          <p class="text-[38px] text-white 
+    max-[1400px]:text-[36px] 
+    max-[1200px]:text-[34px] 
+    max-[900px]:text-[32px] 
+    max-[600px]:text-[28px]">59:59:59</p>
+          <div class="flex gap-[10px] ml-[10px] 
+    max-[1400px]:ml-0 max-[1200px]:ml-0 max-[900px]:ml-0 max-[600px]:ml-0">
+            <p class="text-white text-[16px] 
+      max-[1400px]:text-[16px] 
+      max-[1200px]:text-[15px] 
+      max-[900px]:text-[15px] 
+      max-[600px]:text-[14px]">Hours</p>
+            <p class="text-white text-[16px] 
+      max-[1400px]:text-[16px] 
+      max-[1200px]:text-[15px] 
+      max-[900px]:text-[15px] 
+      max-[600px]:text-[14px]">Minutes</p>
+            <p class="text-white text-[16px] 
+      max-[1400px]:text-[16px] 
+      max-[1200px]:text-[15px] 
+      max-[900px]:text-[15px] 
+      max-[600px]:text-[14px]">Seconds</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="p-[120px] max-[1400px]:p-[100px] max-[1200px]:p-[80px] max-[900px]:p-[50px] max-[600px]:p-[20px]">
+        <!-- Başlıq -->
+        <div class="text-center">
+          <h1
+            class="text-white text-[38px] max-[1400px]:text-[36px] max-[1200px]:text-[34px] max-[900px]:text-[30px] max-[600px]:text-[26px]">
+            How it works
+          </h1>
+          <p
+            class="text-white text-[22px] mt-[10px] max-[1400px]:text-[20px] max-[1200px]:text-[19px] max-[900px]:text-[18px] max-[600px]:text-[16px]">
+            Find out how to get started
+          </p>
+        </div>
+
+        <!-- Kartlar -->
+        <div
+          class="flex flex-wrap justify-center gap-[30px] w-full mt-[50px] max-[1200px]:gap-[25px] max-[900px]:gap-[20px] max-[600px]:flex-col max-[600px]:items-center max-[600px]:gap-[15px] min-[1200px]:flex-nowrap">
+
+          <!-- Kart 1 -->
+          <div
+            class="w-[330px] h-[450px] bg-[#3B3B3B] rounded-[15px] p-[10px] flex flex-col gap-[15px] mt-[40px] pb-[25px] transform hover:scale-110 transition duration-[1100ms] hover:shadow-[0_10px_20px_#7444B8]
+      max-[1400px]:w-[310px] max-[1400px]:h-[430px] max-[1200px]:w-[290px] max-[1200px]:h-[410px] max-[900px]:w-[280px] max-[900px]:h-[430px] max-[600px]:w-[220px]">
+            <img class="w-[250px] m-auto max-[1400px]:w-[230px] max-[1200px]:w-[210px] max-[900px]:w-[200px]"
+              src="./image/hiw_image2.png" alt="">
+            <h1
+              class="text-white text-[22px] m-auto max-[1400px]:text-[21px] max-[1200px]:text-[20px] max-[900px]:text-[19px] max-[600px]:text-[18px]">
+              Create Collection
+            </h1>
+            <p
+              class="w-[250px] text-[16px] text-white m-auto max-[1400px]:text-[15px] max-[1200px]:w-[210px] max-[1200px]:text-[15px] max-[900px]:w-[90%] max-[900px]:text-[14px] max-[600px]:w-[90%]">
+              Upload your work and setup your collection. Add a description, social links and floor price.
+            </p>
+          </div>
+
+          <!-- Kart 2 -->
+          <div
+            class="w-[330px] h-[450px] bg-[#3B3B3B] p-[10px] rounded-[15px] flex flex-col gap-[15px] mt-[40px] pb-[25px] transform hover:scale-110 transition duration-[1100ms] hover:shadow-[0_10px_20px_#7444B8]
+      max-[1400px]:w-[310px] max-[1400px]:h-[430px] max-[1200px]:w-[290px] max-[1200px]:h-[410px] max-[900px]:w-[280px] max-[900px]:h-[430px] max-[600px]:w-[220px]">
+            <img class="w-[250px] m-auto max-[1400px]:w-[230px] max-[1200px]:w-[210px] max-[900px]:w-[200px]"
+              src="./image/hiw_image3.png" alt="">
+            <h1
+              class="text-white text-[22px] m-auto max-[1400px]:text-[21px] max-[1200px]:text-[20px] max-[900px]:text-[19px] max-[600px]:text-[18px]">
+              Start Earning
+            </h1>
+            <p
+              class="w-[250px] text-[16px] text-white m-auto max-[1400px]:text-[15px] max-[1200px]:w-[210px] max-[1200px]:text-[15px] max-[900px]:w-[90%] max-[900px]:text-[14px] max-[600px]:w-[90%]">
+              Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others.
+            </p>
+          </div>
+
+          <!-- Kart 3 -->
+          <div
+            class="w-[330px] h-[450px] bg-[#3B3B3B] p-[10px] rounded-[15px] flex flex-col gap-[15px] mt-[40px] pb-[25px] transform hover:scale-110 transition duration-[1100ms] hover:shadow-[0_10px_20px_#7444B8]
+      max-[1400px]:w-[310px] max-[1400px]:h-[430px] max-[1200px]:w-[290px] max-[1200px]:h-[410px] max-[900px]:w-[280px] max-[900px]:h-[430px] max-[600px]:w-[220px]">
+            <img class="w-[250px] m-auto max-[1400px]:w-[230px] max-[1200px]:w-[210px] max-[900px]:w-[200px]"
+              src="./image/hiw_image1.png" alt="">
+            <h1
+              class="text-white text-[22px] m-auto max-[1400px]:text-[21px] max-[1200px]:text-[20px] max-[900px]:text-[19px] max-[600px]:text-[18px]">
+              Setup Your Wallet
+            </h1>
+            <p
+              class="w-[250px] text-[16px] text-white m-auto max-[1400px]:text-[15px] max-[1200px]:w-[210px] max-[1200px]:text-[15px] max-[900px]:w-[90%] max-[900px]:text-[14px] max-[600px]:w-[90%]">
+              Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in the top right
+              corner.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-[120px] flex items-center justify-center 
+    max-[1400px]:p-[100px] 
+    max-[1200px]:p-[80px] 
+    max-[900px]:p-[50px] 
+    max-[600px]:p-[20px]">
+
+        <div class="flex items-center justify-around bg-[#3B3B3B] rounded-[15px] 
+              w-[950px] h-[430px]
+               max-[1400px]:h-[400px]
+               max-[1200px]:flex-col
+               max-[900px]:flex-col
+              min-[350px]:w-full max-[600px]:flex-col min-[350px]:h-auto min-[350px]:p-[20px] min-[350px]:gap-[25px]">
+
+          <!-- Şəkil -->
+          <img class="rounded-[15px] w-[425px] h-[310px]
+                max-[1400px]:w-[380px] max-[1400px]:h-[280px]
+                max-[1200px]:w-[350px] max-[1200px]:h-[250px]
+                max-[900px]:w-[350px] max-[900px]:h-auto
+                max-[600px]:w-full max-[600px]:h-auto object-cover" src="./image/jowd_image.png" alt="">
+
+          <!-- Mətn və input -->
+          <div class="flex flex-col items-start max-[1200px]:items-center w-full max-[600px]:items-center">
+
+            <div class="flex flex-col gap-[10px] text-center min-[350px]:text-center w-full max-[1200px]:mt-[20px]">
+              <h1 class="text-white text-[38px] 
+                    max-[1400px]:text-[34px] 
+                    max-[1200px]:text-[30px] 
+                    max-[900px]:text-[28px] 
+                    max-[600px]:text-[24px]">
+                Join our weekly digest
+              </h1>
+              <p class="text-white text-[22px] mt-[10px] w-[400px]
+                    max-[1400px]:text-[20px] max-[1400px]:w-[350px]
+                    max-[1200px]:text-[18px] max-[1200px]:w-[320px] min-[350px]:mx-auto
+                    max-[900px]:w-full max-[900px]:px-[10px]
+                    max-[600px]:text-[16px]">
+                Get exclusive promotions & updates straight to your inbox.
+              </p>
+            </div>
+
+            <!-- Input + Button -->
+            <div class="flex w-full mt-[50px] gap-[10px] 
+                  min-[350px]:flex-col min-[350px]:items-center min-[350px]:mt-[30px]">
+
+              <input type="text" class="w-[425px] h-[60px] text-[16px] text-black rounded-[10px] outline-none px-[15px]
+                                  min-[600px]:w-[300px]
+                                  max-[600px]:w-full 
+                                  min-[600px]:h-[50px]" placeholder="Enter your email">
+
+              <button class="flex gap-[10px] items-center bg-[#A259FF] w-[200px] h-[60px] justify-center rounded-[10px] group
+                      max-[1400px]:w-[180px]
+                      max-[1200px]:w-[160px] max-[1200px]:h-[60px]
+                      max-[900px]:w-[200px] max-[900px]:h-[60px]
+                      max-[600px]:w-full max-[600px]:h-[70px]">
+                <img src="./image/envelope_jowd.svg" alt="">
+                <p class="text-[18px] text-white max-[600px]:text-[14px]">Subscribe</p>
+                <span class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 
+                        before:absolute before:inset-0 before:bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.25)_0px,rgba(255,255,255,0.25)_2px,transparent_2px,transparent_6px)] 
+                        before:animate-wave pointer-events-none rounded-full">
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <footer class="w-full bg-[#3B3B3B] mt-[30px] h-[334px] pl-[200px] pt-[30px]
+               min-[350px]:h-auto
+              min-[350px]:p-[20px]
+              min-[1200px]:mt-[-100px]">
+
+    <div class="flex justify-between w-[90%] 
+              max-[1200px]:flex-col max-[1200px]:gap-[30px]
+              max-[900px]:flex-col max-[900px]:gap-[25px]
+              max-[600px]:flex-col max-[600px]:gap-[20px]
+              max-[600px]:mx-auto max-[900px]:mx-auto max-[1200px]:mx-auto">
+
+      <!-- Logo & Info -->
+      <div class="flex flex-col gap-[20px] w-[30%] 
+                max-[1400px]:w-[28%] 
+                max-[1200px]:w-full max-[1200px]:items-center max-[1200px]:text-center
+                max-[900px]:w-full max-[600px]:w-full
+                max-[1200px]:mt-[10px]">
+        <img class=" w-[250px] max-[1400px]:w-[220px] max-[900px]:w-[180px] max-[600px]:w-[200px]"
+          src="./image/nft_marketplace_logo.svg" alt="">
+        <p
+          class="text-[18px] text-white max-[1400px]:text-[16px] max-[1200px]:text-[16px] max-[900px]:text-[14px] max-[600px]:text-[14px]">
+          NFT marketplace UI created with Anima for Figma.
+        </p>
+        <p
+          class="text-[18px] text-white max-[1400px]:text-[16px] max-[1200px]:text-[16px] max-[900px]:text-[14px] max-[600px]:text-[14px]">
+          Join our community
+        </p>
+        <div class="flex gap-[10px] max-[900px]:justify-center max-[600px]:gap-[8px]">
+          <i class="ri-discord-line text-white"></i>
+          <i class="ri-youtube-line text-white"></i>
+          <i class="ri-twitter-x-line text-white"></i>
+          <i class="ri-instagram-line text-white"></i>
+        </div>
+      </div>
+
+      <!-- Explore -->
+      <div class="flex flex-col gap-[20px] w-[20%] 
+                max-[1400px]:w-[18%] 
+                max-[1200px]:w-full max-[1200px]:items-center max-[1200px]:text-center
+                max-[900px]:w-full max-[600px]:w-full">
+        <h1
+          class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[20px] max-[600px]:text-[18px]">
+          Explore
+        </h1>
+        <p
+          class="text-[18px] text-white max-[1400px]:text-[16px] max-[1200px]:text-[16px] max-[900px]:text-[14px] max-[600px]:text-[14px]">
+          MarketPlace</p>
+        <p
+          class="text-[18px] text-white max-[1400px]:text-[16px] max-[1200px]:text-[16px] max-[900px]:text-[14px] max-[600px]:text-[14px]">
+          Rankings</p>
+        <p
+          class="text-[18px] text-white max-[1400px]:text-[16px] max-[1200px]:text-[16px] max-[900px]:text-[14px] max-[600px]:text-[14px]">
+          Connect a wallet</p>
+      </div>
+
+      <!-- Digest -->
+      <div class="flex flex-col gap-[20px] w-[30%] 
+                max-[1400px]:w-[28%] 
+                max-[1200px]:w-full max-[1200px]:items-center max-[1200px]:text-center
+                max-[900px]:w-full max-[600px]:w-full">
+        <h1
+          class="text-white text-[26px] max-[1400px]:text-[24px] max-[1200px]:text-[22px] max-[900px]:text-[20px] max-[600px]:text-[18px]">
+          Join our weekly digest
+        </h1>
+        <p
+          class="text-[18px] text-white max-[1400px]:text-[16px] max-[1200px]:text-[16px] max-[900px]:text-[14px] max-[600px]:text-[14px]">
+          Get exclusive promotions & updates straight to your inbox.
+        </p>
+        <div
+          class="relative w-[425px] max-[1400px]:w-[380px] max-[1200px]:w-[350px] max-[900px]:w-[300px] max-[600px]:w-full">
+          <input type="text" class="w-full h-[60px] text-[16px] text-black rounded-[10px] outline-none px-[15px] pr-[210px] 
+                                max-[1400px]:h-[55px] max-[1400px]:pr-[180px]
+                                max-[1200px]:h-[50px] max-[1200px]:pr-[160px]
+                                max-[900px]:h-[50px] max-[900px]:pr-[140px]
+                                max-[600px]:h-[60px] max-[600px]:pr-[120px]" placeholder="Enter your email">
+
+          <button class="absolute top-1/2 right-[0px] -translate-y-1/2 flex gap-[10px] items-center bg-[#A259FF] 
+                        w-[200px] h-[60px] justify-center rounded-l-[10px] group
+                        max-[1400px]:w-[180px] max-[1400px]:h-[55px]
+                        max-[1200px]:w-[160px] max-[1200px]:h-[50px]
+                        max-[900px]:w-[150px] max-[900px]:h-[50px]
+                        max-[600px]:w-[120px] max-[600px]:h-[60px]">
+            <img src="./image/envelope_jowd.svg" alt="">
+            <p class="text-[18px] text-white max-[600px]:text-[14px]">Subscribe</p>
+            <span class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 
+                        before:absolute before:inset-0 before:bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.25)_0px,rgba(255,255,255,0.25)_2px,transparent_2px,transparent_6px)] 
+                        before:animate-wave pointer-events-none rounded-full">
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
